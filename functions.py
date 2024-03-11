@@ -20,7 +20,7 @@ def c(val: int, seed=False):
 lib = ctypes.CDLL(f'{script_dir}\\lib\\lib.dll')
 
 
-def get_structure_pos(structure: Structure, g: Generator, rx: int, rz: int) -> list:
+def get_structure_pos(structure: Structure, g: Generator, rx: int, rz: int) -> tuple:
     cstructure = c(structure)
     cversion = c(g.version)
     cseed = c(g.seed, True)
@@ -99,8 +99,13 @@ def get_bastion_variant(g: Generator, structure: Structure, x: int, z: int) -> B
     variant = f(cversion, cseed, cx, cz)
     return variant
 
-
-def sort_by_dist(arr: list):
-    return math.sqrt(arr[0]**2 + arr[1]**2)
-
-
+def find_in_range(g: Generator, structure: Structure, x: int, z:int, radius: int) -> list[tuple[int,int]]:
+    res = []
+    for i in range(-radius, radius):
+        for j in range(-radius, radius):
+            struct = get_structure_pos(structure, g, i, j)
+            if struct:
+                x, z = struct
+                if is_viable_structure_pos(structure, g, x, z):
+                    res.append(struct)
+    return res

@@ -7,4 +7,4 @@ def distance_between_structures(structure1, structure2):
     return d
 
 def distance_from_00(c1):
-    d = math.sqrt((c1[0] * c1[0]) + (c1[1] * c1[1]))
+    return math.sqrt((c1[0] * c1[0]) + (c1[1] * c1[1]))
