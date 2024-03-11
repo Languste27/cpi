@@ -1,5 +1,6 @@
 from generator import Generator
 from const import MCVersion, BiomeID, Structure, Dimension, BastionType
+import util
 import ctypes, os, sys
 import math
 
@@ -102,9 +103,7 @@ def get_bastion_variant(g: Generator, structure: Structure, x: int, z: int) -> B
 def sort_by_dist(arr: list):
     return math.sqrt(arr[0]**2 + arr[1]**2)
 
-def pythagoras(c1, c2):
-    d = math.sqrt((c2[0]-c1[0])**2+(c2[1]-c1[1])**2)
-    return d
+
 
 # for i in range(1, 100000):
 #     # print(i)
