@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "finders.h": "c",
-        "generator.h": "c",
-        "inttypes.h": "c",
-        "stdlib.h": "c",
-        "stdio.h": "c"
-    }
-}

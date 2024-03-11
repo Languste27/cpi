@@ -1,0 +1,4 @@
+.vscode
+__pycache__/
+lib/a.exe
+lib/code.c

@@ -1,11 +1,9 @@
-from enum import IntEnum
-
-
 class Dimension:
     DIM_NETHER = -1
     DIM_OVERWORLD   =    0
     DIM_END         =   +1
     DIM_UNDEF       = 1000
+
 
 class MCVersion:
     MC_1_0_0 = 3
@@ -205,6 +203,7 @@ class BiomeID:
     deep_dark = 183
     mangrove_swamp = 184
     cherry_grove = 185
+
 
 class BiomeGroups:
     Forests = [
