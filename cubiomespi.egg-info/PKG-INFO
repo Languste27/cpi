@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: cubiomespi
+Version: 0.1
+Summary: This library is a python interface for cubiomes
+Home-page: https://github.com/Languste27/cpi
+Author: Languste
+Author-email: maximilian.afemann@gmail.com
+Description-Content-Type: text/markdown
+
+cubiomes python interface
