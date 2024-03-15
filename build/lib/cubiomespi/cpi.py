@@ -1,6 +1,6 @@
-from generator import Generator
-import constants
-import util
+from .generator import Generator
+from .constants import *
+from .util import *
 import ctypes, os
 
 
@@ -19,7 +19,7 @@ def __c(val: int, seed=False):
 lib = ctypes.CDLL(f'{script_dir}\\lib\\lib.dll')
 
 
-def get_structure_pos(structure: constants.Structure, g: Generator, rx: int, rz: int) -> tuple[int, int]:
+def get_structure_pos(structure: Structure, g: Generator, rx: int, rz: int) -> tuple[int, int]:
     cstructure = __c(structure)
     cversion = __c(g.version)
     cseed = __c(g.seed, True)
@@ -35,7 +35,7 @@ def get_structure_pos(structure: constants.Structure, g: Generator, rx: int, rz:
     return coords
 
 
-def is_viable_structure_pos(structure: constants.Structure, g: Generator, x: int, z: int) -> bool:
+def is_viable_structure_pos(structure: Structure, g: Generator, x: int, z: int) -> bool:
     cstructure = __c(structure)
     cversion = __c(g.version)
     cseed = __c(g.seed, True)
@@ -70,7 +70,7 @@ def get_spawn_pos(g: Generator) -> tuple[int, int]:
     return loc
 
 
-def get_biome_at(g: Generator, x: int, y: int, z: int) -> constants.BiomeID:
+def get_biome_at(g: Generator, x: int, y: int, z: int) -> BiomeID:
     cversion = __c(g.version)
     cseed = __c(g.seed, True)
     cdimension = __c(g.dimension)
@@ -84,7 +84,7 @@ def get_biome_at(g: Generator, x: int, y: int, z: int) -> constants.BiomeID:
     return biome
 
 
-def get_bastion_variant(g: Generator, x: int, z: int) -> constants.BastionType:
+def get_bastion_variant(g: Generator, x: int, z: int) -> BastionType:
     cversion = __c(g.version)
     cseed = __c(g.seed, True)
     cx = __c(x)
@@ -96,7 +96,7 @@ def get_bastion_variant(g: Generator, x: int, z: int) -> constants.BastionType:
     return variant
 
 
-def find_structure_in_range(g: Generator, structure: constants.Structure, srx: int, srz: int, erx: int, erz: int) -> list[tuple[int,int]]:
+def find_structure_in_range(g: Generator, structure: Structure, srx: int, srz: int, erx: int, erz: int) -> list[tuple[int,int]]:
     cstructure = __c(structure)
     cversion = __c(g.version)
     cseed = __c(g.seed, True)
@@ -118,7 +118,7 @@ def find_structure_in_range(g: Generator, structure: constants.Structure, srx: i
     return structure_array
 
 
-def find_closest_structure(g: Generator, structure: constants.Structure, cx: int, cz: int, limit: int):
+def find_closest_structure(g: Generator, structure: Structure, cx: int, cz: int, limit: int) -> tuple[int, int]:
     cstructure = __c(structure)
     cversion = __c(g.version)
     cseed = __c(g.seed, True)

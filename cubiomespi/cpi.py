@@ -4,7 +4,6 @@ from .util import *
 import ctypes, os
 
 
-import macro
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
