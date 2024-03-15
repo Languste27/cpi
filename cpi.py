@@ -1,8 +1,7 @@
 from .generator import Generator
-from .constants import *
+from .constants import Structure, BiomeID, BiomeGroups, BastionType
 from .util import *
 import ctypes, os
-
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 

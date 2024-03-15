@@ -1,5 +1,6 @@
 import math
 import ctypes
+import macro
 
 def __c(val: int, seed=False):
     if seed:
