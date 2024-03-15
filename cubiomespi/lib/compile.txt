@@ -1,0 +1,5 @@
+cd C:/Users/maxim/Desktop/Projects/cpi/lib
+gcc -shared -o lib.dll -fPIC newlib.c util.c noise.c layers.c generator.c finders.c biome_tree.c -m64
+gcc newlib.c util.c noise.c layers.c generator.c finders.c biome_tree.c
+
+in msys 64bit mingw
