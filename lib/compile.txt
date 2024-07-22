@@ -1,0 +1,1 @@
+gcc -shared -o lib.dll -fPIC newlib.c cubiomes/util.c cubiomes/noise.c cubiomes/layers.c cubiomes/generator.c cubiomes/finders.c cubiomes/biometree.c cubiomes/biomenoise.c  -m64

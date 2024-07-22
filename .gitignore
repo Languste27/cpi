@@ -1,7 +1,6 @@
 .vscode
 .git
 newlib.c
-lib/*
 
 !lib/lib.dll
 !lib/newlib.c
