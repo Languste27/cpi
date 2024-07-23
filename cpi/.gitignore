@@ -1,0 +1,6 @@
+.vscode
+.git
+newlib.c
+__pycache__
+!lib/lib.dll
+!lib/newlib.c
