@@ -1,1 +1,1 @@
-from cpi import *
+from .cpi import *
