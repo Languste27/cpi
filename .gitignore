@@ -3,6 +3,7 @@
 __pycache__
 build
 dist
-cpi.egg-info
-setup.cfg
+
+__setup.py
 project.toml
+src\cubiomespi.egg-info
