@@ -3,6 +3,11 @@
 ## Overview
 
 The Cubiomes Python Interface (CPI) is a python interface for [Cubiomes](https://github.com/Cubitect/cubiomes)
+# Usage
+To use you can download it via pip, with:
+     
+     
+     `pip install cubiomespi`
 
 ## Classes
 
