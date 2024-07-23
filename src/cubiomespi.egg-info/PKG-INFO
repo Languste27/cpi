@@ -1,13 +1,18 @@
+Metadata-Version: 2.1
+Name: cubiomespi
+Version: 1.0
+Summary: This library is a python interface for cubiomes
+Home-page: https://github.com/Languste27/cpi
+Author: Languste
+Author-email: maximilian.afemann@gmail.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
 # Cubiomes Python Interface (CPI) Documentation
 
 ## Overview
 
 The Cubiomes Python Interface (CPI) is a python interface for [Cubiomes](https://github.com/Cubitect/cubiomes)
-# Usage
-To use you can download it via pip, with:
-     
-     
-     `pip install cubiomespi`
 
 ## Classes
 

@@ -4,3 +4,5 @@ __pycache__
 build
 dist
 cpi.egg-info
+setup.cfg
+project.toml

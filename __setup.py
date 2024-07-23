@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="cpi",
+    name="cubiomespi",
     version="1.0",
     packages=find_packages(),
-    package_data={'cpi': ['lib/lib.dll', 'lib/compile.txt', 'lib/newlib.c']},
+    package_data={'cubimespi': ['lib/lib.dll', 'lib/compile.txt', 'lib/newlib.c']},
     install_requires=[],  # List your library's dependencies here
     author="Languste",
     author_email="maximilian.afemann@gmail.com",
