@@ -7,7 +7,7 @@ The Cubiomes Python Interface (CPI) is a python interface for [Cubiomes](https:/
 To use you can download it via pip, with:
      
      
-     `pip install cubiomespi`
+     pip install cubiomespi
 
 ## Classes
 
