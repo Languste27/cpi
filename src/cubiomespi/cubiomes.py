@@ -429,14 +429,14 @@ def is_viable_structure_pos(structure: Structure, g: Generator, x: int, z: int) 
     return ptr == 1
 
 
-def get_stronghold_pos(g: Generator, count) -> list[tuple[int, int]]:
+def get_stronghold_pos(g: Generator, count = 3) -> list[tuple[int, int]]:
     cversion = __c(g.version)
     cseed = __c(g.seed, True)
     lib.INTERFACE_getStrongholdPos.restype = ctypes.POINTER(ctypes.c_int)
-    lib.INTERFACE_getStrongholdPos.argtypes = [ctypes.c_uint64, ctypes.c_int]
-    ptr = lib.INTERFACE_getStrongholdPos(cseed, cversion)
-    sh_locs = [[ptr[2*i], ptr[2*i+1]] for i in range(128)]
-    return sh_locs[:count]
+    lib.INTERFACE_getStrongholdPos.argtypes = [ctypes.c_uint64, ctypes.c_int, ctypes.c_int]
+    ptr = lib.INTERFACE_getStrongholdPos(cseed, cversion, count)
+    sh_locs = [[ptr[2*i], ptr[2*i+1]] for i in range(count)]
+    return sh_locs
 
 
 def get_spawn_pos(g: Generator) -> tuple[int, int]:

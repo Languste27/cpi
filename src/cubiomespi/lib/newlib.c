@@ -32,22 +32,23 @@ int INTERFACE_isViableStructurePos(int structuretype, int mcVersion, uint64_t se
     return isViableStructurePos(structuretype, &g, x, z, 0);
 }
 
-int* INTERFACE_getStrongholdPos(uint64_t seed, int mcVersion){
+int* INTERFACE_getStrongholdPos(uint64_t seed, int mcVersion, int count){
     Generator g;
     setupGenerator(&g, mcVersion, 0);
     applySeed(&g, DIM_OVERWORLD, seed);
     StrongholdIter sh;
     Pos pos = initFirstStronghold(&sh, mcVersion, seed);
 
-    int* StrongholdPositions = (int*)malloc(128 * 2 * sizeof(int));
+    int* StrongholdPositions = (int*) malloc(128 * 2 * sizeof(int));
     
-    for (int i=0; i<=127; i++){
+    for (int i = 0; i < count; i++){
         nextStronghold(&sh, &g);
         StrongholdPositions[i * 2] = sh.pos.x; // Store x position
         StrongholdPositions[i * 2 + 1] = sh.pos.z; // Store z position
     }
     return StrongholdPositions;
 }
+
 
 int* INTERFACE_getSpwan(uint64_t seed, int mcVersion){
     Generator g;
