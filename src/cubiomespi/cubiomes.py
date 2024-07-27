@@ -1,5 +1,5 @@
 import ctypes, os
-from constants import *
+from cubiomespi.constants import *
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 lib = ctypes.CDLL(f'{script_dir}\\lib\\lib.dll')
