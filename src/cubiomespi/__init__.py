@@ -1,1 +1,1 @@
-from .cubiomes import *
+from cubiomes import *
