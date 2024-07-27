@@ -6,6 +6,13 @@
 #include <math.h>
 
 
+
+int INTERFACE_getSurfaceHeightEnd(int mcVersion, uint64_t seed, int x, int z){
+    int y = getSurfaceHeightEnd(mcVersion, seed, x, z);
+    return y;
+}
+
+
 int* INTERFACE_getStructurePos(int structuretype, int mcVersion, uint64_t seed, int rx, int rz)
 {
     Pos pos;

@@ -12,6 +12,9 @@ class Generator:
         self.version = mc
         self.seed = seed
         self.dimension = dimension
+    
+    # def _gen_to_c(self):
+    #     return (__c(self.version), __c(self.seed, True), __c(self.dimension))
 
 
 
@@ -22,6 +25,18 @@ def __c(val: int, seed=False):
         return ctypes.c_int(val)
 
 
+
+def get_end_y_height(g: Generator, x, z):
+    cversion, cseed = __c(g.version), __c(g.seed, True)
+    cx = __c(x)
+    cz = __c(z)
+
+    f = lib.INTERFACE_getSurfaceHeightEnd
+    f.restype = ctypes.c_int
+    f.argtypes = [ctypes.c_int, ctypes.c_uint64, ctypes.c_int, ctypes.c_int]
+    y = f(cversion, cseed, cx, cz)
+
+    return y
 
 def get_structure_pos(structure: Structure, g: Generator, rx: int, rz: int) -> tuple[int, int]:
     cstructure = __c(structure)
