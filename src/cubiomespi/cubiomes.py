@@ -38,6 +38,7 @@ def get_end_y_height(g: Generator, x, z):
 
     return y
 
+
 def get_structure_pos(structure: Structure, g: Generator, rx: int, rz: int) -> tuple[int, int]:
     cstructure = __c(structure)
     cversion = __c(g.version)
@@ -113,6 +114,7 @@ def get_bastion_variant(g: Generator, x: int, z: int) -> BastionType:
     f.argtypes = [ctypes.c_int, ctypes.c_uint64, ctypes.c_int, ctypes.c_int]
     variant = f(cversion, cseed, cx, cz)
     return variant
+
 
 
 def find_structure_in_range(g: Generator, structure: Structure, srx: int, srz: int, erx: int, erz: int) -> list[tuple[int,int]]:

@@ -80,13 +80,13 @@ int INTERFACE_getBiomeAt(int mcVersion, uint64_t seed, int dimension, int x, int
 int INTERFACE_getBastionVariant(int mcVersion, uint64_t seed, int x, int z){
     StructureVariant sv;
     int bastion_type = getVariant(&sv, Bastion, mcVersion, seed, x, z, -1);
-
+    
     switch (sv.sx)
     {
-    case 46: {return 0;}
-    case 30: {return 1;}
-    case 38: {return 2;}
-    case 16: {return 3;}
+    case 46: {return 0;}  // Housing
+    case 30: {return 1;}  // Stables
+    case 38: {return 2;}  // Treasure
+    case 16: {return 3;}  // Bridge
     }
 }
 

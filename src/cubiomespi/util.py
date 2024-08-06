@@ -14,3 +14,11 @@ def distance_from_00(c1):
 def distance_between_points(x1,y1,x2,y2):
     d = math.sqrt(((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1)))
     return d
+
+
+def BastionVariant_toString(bastion: int):
+    match bastion:
+        case 0: return "Housing"
+        case 1: return "Stables"
+        case 2: return "Treasure"
+        case 3: return "Bridge"

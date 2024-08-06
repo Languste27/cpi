@@ -255,8 +255,9 @@ class BiomeGroups:
         ]
 
 
+
 class BastionType:
-    HOUSING = _constant(0, "Housing")
-    STABLES = _constant(1, "Stables")
-    TREASURE = _constant(2, "Treasure")
-    BRIDGE = _constant(3, "Bridge")
+    HOUSING =  0
+    STABLES =  1
+    TREASURE = 2
+    BRIDGE =   3
